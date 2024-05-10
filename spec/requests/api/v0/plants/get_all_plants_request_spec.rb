@@ -12,6 +12,7 @@ RSpec.describe "Get all Plants", type: :request do
       get "/api/v0/plants"
 
       expect(response).to be_successful
+      expect(response.status).to eq(200)
 
       plants = JSON.parse(response.body, symbolize_names: true)
       expect(plants).to be_a(Hash)
