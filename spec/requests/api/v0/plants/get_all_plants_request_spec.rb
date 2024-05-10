@@ -14,7 +14,28 @@ RSpec.describe "Get all Plants", type: :request do
       expect(response).to be_successful
 
       plants = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry
+      expect(plants).to be_a(Hash)
+      expect(plants).to have_key(:data)
+      expect(plants[:data]).to be_a(Array)
+      expect(plants[:data].count).to eq(2)
+      
+      plants[:data].each do |plant|
+        check_hash_structure(plant, :id, String)
+        check_hash_structure(plant, :type, String)
+        check_hash_structure(plant, :attributes, Hash)
+        check_hash_structure(plant[:attributes], :name, String)
+        check_hash_structure(plant[:attributes], :description, String)
+        check_hash_structure(plant[:attributes], :petals, Integer)
+        check_hash_structure(plant[:attributes], :petal_color, String)
+        check_hash_structure(plant[:attributes], :petal_length, Integer)
+        check_hash_structure(plant[:attributes], :petal_width, Integer)
+        check_hash_structure(plant[:attributes], :petal_height, Integer)
+        check_hash_structure(plant[:attributes], :stem_length, Integer)
+        check_hash_structure(plant[:attributes], :stem_width, Integer)
+        check_hash_structure(plant[:attributes], :stem_height, Integer)
+        check_hash_structure(plant[:attributes], :stem_color, String)
+        check_hash_structure(plant[:attributes], :life_cycle, String)
+      end
     end
   end 
 end
