@@ -92,3 +92,8 @@ VCR.configure do |config|
   config.default_cassette_options = { record: :once }
   config.default_cassette_options = { record: :new_episodes }
 end
+
+def check_hash_structure(object, key, data_type)
+  expect(object).to have_key(key)
+  expect(object[key]).to be_a(data_type)
+end
