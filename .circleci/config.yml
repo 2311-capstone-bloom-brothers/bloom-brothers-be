@@ -17,6 +17,7 @@ jobs: # a collection of steps
         environment: # environment variables for database, it is kind of obvious but it is important that they match with your test config in database.yml
           POSTGRES_USER: postgres
           POSTGRES_DB: bloom_brothers_be_test
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
       # Which version of bundler?
@@ -55,7 +56,7 @@ workflows:
           post-steps:
             - run:
                 name: migrate
-                command: heroku run -a $HEROKU_APP_NAME rails db:migrate
+                command: heroku run -a bloom-brothers-be rails db:migrate
           filters:
             branches:
               only:
