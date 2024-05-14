@@ -10,25 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_10_001111) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_14_164955) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "petals"
     t.string "petal_color"
-    t.integer "petal_length"
-    t.integer "petal_width"
-    t.integer "petal_height"
     t.string "stem_color"
-    t.integer "stem_length"
-    t.integer "stem_width"
-    t.integer "stem_height"
     t.integer "life_cycle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "radius_top"
+    t.float "radius_bottom"
+    t.float "radial_segments"
+    t.float "rec_radius"
+    t.float "noise_scale"
+    t.float "noise_impact_x"
+    t.float "noise_impact_y"
+    t.float "noise_impact_z"
+    t.float "shape_height"
+    t.float "stem_height"
+    t.float "stem_width"
+    t.float "rec_position_y"
+    t.float "bloom_rotation_x"
+    t.float "bloom_rotation_y"
+    t.float "bloom_rotation_z"
   end
 
   create_table "user_plants", force: :cascade do |t|
