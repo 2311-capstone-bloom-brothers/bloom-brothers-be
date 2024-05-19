@@ -1,19 +1,19 @@
-# spec/lib/plant_generator_spec.rb
 require 'rails_helper'
 
 RSpec.describe PlantGenerator do
-  describe '.new' do
-    context 'when plant name is provided' do
-      let(:plant_name) { :flower1 }
+  describe '.create' do
+    context 'when plant type is provided' do
+      let(:plant_type) { 'flower1' }
 
       it 'generates a plant with the provided name' do
-        plant = PlantGenerator.new(plant_name)
-        expect(plant[:name]).to eq('')
+        plant = PlantGenerator.create(name: 'Rose', description: 'A beautiful red rose', plant_type: plant_type)
+        expect(plant[:name]).to eq('Rose')
+        expect(plant[:description]).to eq('A beautiful red rose')
       end
 
       it 'generates a plant with the correct attributes' do
-        plant = PlantGenerator.new(plant_name)
-        expect(plant[:plant_type]).to eq('flower1')
+        plant = PlantGenerator.create(name: 'Rose', description: 'A beautiful red rose', plant_type: plant_type)
+        expect(plant[:plant_type]).to eq(:flower1)
         expect(plant[:lifespan]).to eq(86400000)
         expect(plant[:planted]).to be_within(1).of(Time.now.to_i)
         expect(plant[:phases][:stem][:color]).to eq([[0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0]])
@@ -25,9 +25,9 @@ RSpec.describe PlantGenerator do
       end
     end
 
-    context 'when plant name is not provided' do
+    context 'when plant type is not provided' do
       it 'generates a plant with an empty name' do
-        plant = PlantGenerator.new
+        plant = PlantGenerator.create
         expect(plant[:name]).to be_empty
       end
     end
@@ -48,7 +48,7 @@ RSpec.describe PlantGenerator do
       expect(random_values[3]).to be_between(0.3, 0.4)
     end
 
-    it 'generates an array with a maximum of 5 elements' do
+    it 'generates an array with a maximum of 6 elements' do
       long_array = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
       random_values = PlantGenerator.generate_random_values(long_array)
       expect(random_values.size).to eq(6)
