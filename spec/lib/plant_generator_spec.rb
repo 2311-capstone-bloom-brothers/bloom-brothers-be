@@ -13,7 +13,7 @@ RSpec.describe PlantGenerator do
 
       it 'generates a plant with the correct attributes' do
         plant = PlantGenerator.new(plant_name)
-        expect(plant[:type]).to eq('flower1')
+        expect(plant[:plant_type]).to eq('flower1')
         expect(plant[:lifespan]).to eq(86400000)
         expect(plant[:planted]).to be_within(1).of(Time.now.to_i)
         expect(plant[:phases][:stem][:color]).to eq([[0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0], [0, 255, 0]])
