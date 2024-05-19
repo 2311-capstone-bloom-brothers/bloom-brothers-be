@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v0 do 
       resources :plants, only: [:index, :create]
+      get "/users/:user_id/plants", to: "user_plants#index"
     end
   end
   # Defines the root path route ("/")
