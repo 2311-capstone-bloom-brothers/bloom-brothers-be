@@ -35,7 +35,7 @@ module PlantGenerator
     plant = {
       name: '',
       description: '',
-      type: 'flower1',
+      plant_type: 'flower1',
       lifespan: 86400000,
       planted: Time.now.to_i,
       phases: {
