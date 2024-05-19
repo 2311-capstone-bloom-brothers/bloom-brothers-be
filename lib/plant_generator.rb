@@ -1,5 +1,3 @@
-require 'securerandom'
-
 module PlantGenerator
   PLANT_ATTRIBUTES = {
     flower1: {
@@ -36,7 +34,6 @@ module PlantGenerator
 
     plant = {
       name: '',
-      id: SecureRandom.uuid,
       description: '',
       type: 'flower1',
       lifespan: 86400000,
