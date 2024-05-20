@@ -23,19 +23,20 @@ module PlantGenerator
     }
   }
 
-  def self.new(plant_name = nil)
-    if plant_name.nil?
-      plant_name = PLANT_ATTRIBUTES.keys.sample
-    end
+  def self.create(name: '', description: '', plant_type: nil)
+    plant_type ||= PLANT_ATTRIBUTES.keys.sample
+    plant_type = plant_type.to_sym
 
-    attributes = PLANT_ATTRIBUTES[plant_name]
+    attributes = PLANT_ATTRIBUTES[plant_type]
+
+    raise ArgumentError, "Invalid plant type: #{plant_type}" unless attributes
 
     bloom_color = generate_bloom_color
 
     plant = {
-      name: '',
-      description: '',
-      plant_type: 'flower1',
+      name: name,
+      description: description,
+      plant_type: plant_type,
       lifespan: 86400000,
       planted: Time.now.to_i,
       phases: {
