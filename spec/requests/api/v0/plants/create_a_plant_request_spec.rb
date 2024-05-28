@@ -29,7 +29,7 @@ RSpec.describe "Create A Plant", type: :request do
       check_hash_structure(plant[:data], :id, String)
       check_hash_structure(plant[:data], :type, String)
       check_hash_structure(plant[:data], :attributes, Hash)
-
+      
       attributes = plant[:data][:attributes]
       expect(attributes).to have_key(:name)
       expect(attributes[:name]).to eq("Rose")

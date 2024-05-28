@@ -11,39 +11,15 @@ UserPlant.destroy_all
 User.destroy_all
 Plant.destroy_all
 
-User.create(email: "user1@example.com", password_digest: "password1", location: "New York")
+user = User.create(email: "user1@example.com", password_digest: "password1", location: "New York")
 
 
 # Create some plants
-Plant.create(
-  name: "Rose",
-  description: "Beautiful flower with thorns",
-  petals: 5,
-  petal_color: "Red",
-  petal_length: 2,
-  petal_width: 1,
-  petal_height: 3,
-  stem_color: "Green",
-  stem_length: 10,
-  stem_width: 1,
-  stem_height: 10,
-  life_cycle: 2
-)
-Plant.create(
-  name: "Sunflower",
-  description: "Large flower that follows the sun",
-  petals: 20,
-  petal_color: "Yellow",
-  petal_length: 4,
-  petal_width: 4,
-  petal_height: 4,
-  stem_color: "Green",
-  stem_length: 50,
-  stem_width: 2,
-  stem_height: 50,
-  life_cycle: 1
-)
+plant_1 = PlantGenerator.create(name: "Rose", description: "The flower of love", plant_type: "flower1")
+plant_2 = PlantGenerator.create(name: "Sun Flower", description: "Bows down to no man or Star", plant_type: "flower1")
+plant_1 = Plant.create!(plant_1)
+plant_2 = Plant.create!(plant_2)
 
 # Associate plants with users
-UserPlant.create(user_id: User.first.id, plant_id: Plant.first.id)
-UserPlant.create(user_id: User.first.id, plant_id: Plant.last.id)
+UserPlant.create(user_id: user.id, plant_id: plant_1.id)
+UserPlant.create(user_id: user.id, plant_id: plant_2.id)
