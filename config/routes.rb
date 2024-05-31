@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   namespace :api do 
     namespace :v0 do 
-      resources :plants, only: [:index, :create]
+      resources :plants, only: [:index, :create, :destroy]
       get "/users/:user_id/plants", to: "user_plants#index"
       get "/users/:user_id/plants/:id", to: "user_plants#show"
     end

@@ -13,6 +13,11 @@ class Api::V0::PlantsController < ApplicationController
     render json: PlantSerializer.new(create_plant), status: 201
   end
 
+  def destroy
+    plant = Plant.find(params[:id])
+    render json: plant.destroy, status: 204
+  end
+
   private 
 
   def plant_params
