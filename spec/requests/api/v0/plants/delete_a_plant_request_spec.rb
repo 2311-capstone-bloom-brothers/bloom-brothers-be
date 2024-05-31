@@ -4,8 +4,16 @@ RSpec.describe "Delete a plant", type: :request do
   describe "As a User" do
 
     before do
-      plant_data_1 = PlantGenerator.create(name: "rose", description: "The Flower of love", plant_type: "flower1")
-      plant_data_2 = PlantGenerator.create(name: "Sun Flower", description: "Holds the power of the sun", plant_type: "flower1")
+      plant_1_name = "Rose"
+      plant_1_description = "The Flower of love"
+      plant_1_type = "flower1"
+      plant_2_name = "Sun Flower"
+      plant_2_description = "The power of the sun"
+      plant_2_type = "flower1"
+
+      plant_data_1 = PlantGenerationService.generate_plant(plant_1_name, plant_1_description, plant_1_type)
+      plant_data_2 = PlantGenerationService.generate_plant(plant_2_name, plant_2_description, plant_2_type)
+      # require 'pry'; binding.pry
       @plant = Plant.create!(plant_data_1)
       @plant_2 = Plant.create!(plant_data_2)
     end

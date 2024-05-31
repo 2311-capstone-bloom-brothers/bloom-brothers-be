@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       resources :plants, only: [:index, :create, :destroy]
       get "/users/:user_id/plants", to: "user_plants#index"
       get "/users/:user_id/plants/:id", to: "user_plants#show"
+      
+      post "/sign_in", to: "sign_in#sign_in"
+      delete "/sign_out", to: "sign_out#sign_out"
     end
   end
   # Defines the root path route ("/")

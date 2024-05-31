@@ -35,6 +35,7 @@ gem "jsonapi-serializer"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 gem "rack-cors"
+gem "dotenv"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -44,6 +45,7 @@ group :development, :test do
   gem 'faker'
   gem 'launchy'
   gem 'capybara'
+  gem 'faraday'
 end
 
 group :development do
@@ -60,4 +62,3 @@ group :test do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
