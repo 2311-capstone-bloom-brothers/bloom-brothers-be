@@ -2,13 +2,12 @@ require "rails_helper"
 
 RSpec.describe "Create A Plant", type: :request do
   describe "As a User" do
-
     before do
       @body = {
         name: "Rose",
         description: "The Flower Of Love",
         plant_type: "flower1"
-              }
+      }
       @bad_body = {
         name: "",
         description: "The Flower Of Love",
@@ -17,14 +16,14 @@ RSpec.describe "Create A Plant", type: :request do
       @headers = {"CONTENT_TYPE" => "application/json"}
     end
 
-    it "creates a new plant via HTTP request" do
+    it "creates a new plant via HTTP request", vcr: { cassette_name: 'create_a_plant' } do
       post "/api/v0/plants", headers: @headers, params: JSON.generate(@body)
 
       expect(response).to be_successful
       expect(response.status).to eq(201)
 
       plant = JSON.parse(response.body, symbolize_names: true)
-      
+
       check_hash_structure(plant, :data, Hash)
       check_hash_structure(plant[:data], :id, String)
       check_hash_structure(plant[:data], :type, String)
@@ -45,8 +44,8 @@ RSpec.describe "Create A Plant", type: :request do
       expect(attributes[:phases]).to be_a(Hash)
     end
 
-    describe "Sad Path" do 
-      it "errors when not all required attributes are passed" do 
+    describe "Sad Path" do
+      it "errors when not all required attributes are passed", vcr: { cassette_name: 'create_a_plant_sad_path' } do
         post "/api/v0/plants", headers: @headers, params: JSON.generate(@bad_body)
 
         expect(response).not_to be_successful
@@ -59,5 +58,5 @@ RSpec.describe "Create A Plant", type: :request do
         expect(data[:errors].first[:detail]).to eq("Validation failed: Name can't be blank")
       end
     end
-  end 
+  end
 end
