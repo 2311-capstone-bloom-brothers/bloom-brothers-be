@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Get one user plant", type: :request do
+RSpec.describe "Get one user plant", type: :request, vcr: true do
   describe "As a User" do
 
     before do
@@ -30,12 +30,12 @@ RSpec.describe "Get one user plant", type: :request do
       expect(response.status).to eq(200)
 
       plant = JSON.parse(response.body, symbolize_names: true)
-      
+
       check_hash_structure(plant, :data, Hash)
       check_hash_structure(plant[:data], :id, String)
       check_hash_structure(plant[:data], :type, String)
       check_hash_structure(plant[:data], :attributes, Hash)
-      
+
       attributes = plant[:data][:attributes]
       expect(attributes).to have_key(:name)
       expect(attributes[:name]).to eq("Rose")
@@ -50,5 +50,5 @@ RSpec.describe "Get one user plant", type: :request do
       expect(attributes).to have_key(:phases)
       expect(attributes[:phases]).to be_a(Hash)
     end
-  end 
+  end
 end
