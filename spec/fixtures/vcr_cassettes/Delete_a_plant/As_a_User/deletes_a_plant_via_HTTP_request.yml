@@ -100,4 +100,220 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","lifespan":86400000,"planted":1717361751,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[223,249,57],[223,249,57],[223,249,57],[223,249,57],[223,249,57]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.2,0.2,0.12],"radiusTop":[0.3,0.42,1.08,1.09,1.07],"radiusBottom":[0.3,0.3,0.65,1.09,0.85],"noiseScale":[0.46,0.49,1.34,1.16,0.17],"noiseImpactX":[0.46,0.48,0.5,0.5,0.46],"noiseImpactY":[0.34,0.5,0.62,0.94,2.63],"noiseImpactZ":[0,0,1,0.94,0.94],"height":[0.16,0.1,0.04,0.04,0.03],"radialSegments":[100,100,100,63.93,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
   recorded_at: Sun, 02 Jun 2024 20:55:51 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-b4648dce0143.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 02 Jun 2024 21:02:23 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"2c811458da7e8ae7a3149e2ee6d346eb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1732aa9-88cc-4f57-8afc-7d9061716b15
+      X-Runtime:
+      - '0.001626'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '1291'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1","lifespan":86400000,"planted":1717362144,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[221,162,140],[221,162,140],[221,162,140],[221,162,140],[221,162,140]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.18,0.2,0.15],"radiusTop":[0.3,0.43,0.86,1.09,1.01],"radiusBottom":[0.3,0.44,0.87,1.09,0.97],"noiseScale":[0.46,1.3,1.27,1.18,0.84],"noiseImpactX":[0.46,0.49,0.5,0.5,0.39],"noiseImpactY":[0.34,0.41,0.55,1.48,2.63],"noiseImpactZ":[0,0,0,0.99,0.94],"height":[0.16,0.14,0.04,0.04,0.03],"radialSegments":[100,100,100,43.09,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Sun, 02 Jun 2024 21:02:24 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-b4648dce0143.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 02 Jun 2024 21:02:24 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"a977b88dac2dbab81d195a188413b2e3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d91f53b3-f340-4d24-89c3-915cb765e7f0
+      X-Runtime:
+      - '0.001662'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '1291'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","lifespan":86400000,"planted":1717362144,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[250,149,94],[250,149,94],[250,149,94],[250,149,94],[250,149,94]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.19,0.2,0.15],"radiusTop":[0.3,0.4,0.66,1.09,0.33],"radiusBottom":[0.3,0.45,0.53,1.09,1.07],"noiseScale":[0.46,0.7,1.58,1.2,0.76],"noiseImpactX":[0.46,0.5,0.5,0.5,0.42],"noiseImpactY":[0.34,0.47,0.55,1.74,2.63],"noiseImpactZ":[0,0,0,0.95,0.94],"height":[0.16,0.11,0.04,0.04,0.04],"radialSegments":[100,100,100,22.56,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Sun, 02 Jun 2024 21:02:24 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-2db5d13ea731.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717436723&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=vVekyTij%2BHe6l97FRFYrcUJZXSgUIbg1H2D2hQPMmtQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717436723&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=vVekyTij%2BHe6l97FRFYrcUJZXSgUIbg1H2D2hQPMmtQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1290'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.8.1 (Ruby/3.2.2/2023-03-30)
+      Date:
+      - Mon, 03 Jun 2024 17:45:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1","lifespan":86400000,"planted":1717436723,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[252,202,142],[252,202,142],[252,202,142],[252,202,142],[252,202,142]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.19,0.2,0.15],"radiusTop":[0.3,0.45,0.53,1.09,0.84],"radiusBottom":[0.3,0.3,0.73,1.09,1.0],"noiseScale":[0.46,1.62,1.19,1.05,0.14],"noiseImpactX":[0.46,0.49,0.5,0.5,0.42],"noiseImpactY":[0.34,0.39,0.85,1.83,2.63],"noiseImpactZ":[0,0,0,0.95,0.94],"height":[0.16,0.11,0.04,0.04,0.02],"radialSegments":[100,100,100,19.13,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Mon, 03 Jun 2024 17:45:23 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-2db5d13ea731.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717436724&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=GBPMIgrFAFEclhuEPKMFVugtDYgozX71gn7JbPCjziM%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717436724&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=GBPMIgrFAFEclhuEPKMFVugtDYgozX71gn7JbPCjziM%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1289'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.8.1 (Ruby/3.2.2/2023-03-30)
+      Date:
+      - Mon, 03 Jun 2024 17:45:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","lifespan":86400000,"planted":1717436724,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[221,9,124],[221,9,124],[221,9,124],[221,9,124],[221,9,124]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.18,0.2,0.18],"radiusTop":[0.3,0.41,0.87,1.09,0.55],"radiusBottom":[0.3,0.42,0.52,1.09,1.0],"noiseScale":[0.46,1.54,1.65,1.07,1.23],"noiseImpactX":[0.46,0.49,0.5,0.5,0.42],"noiseImpactY":[0.34,0.36,0.66,1.46,2.63],"noiseImpactZ":[0,0,1,0.95,0.94],"height":[0.16,0.14,0.04,0.04,0.02],"radialSegments":[100,100,100,71.71,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Mon, 03 Jun 2024 17:45:24 GMT
 recorded_with: VCR 6.2.0

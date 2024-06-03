@@ -50,4 +50,112 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","lifespan":86400000,"planted":1717129104,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[5,156,66],[5,156,66],[5,156,66],[5,156,66],[5,156,66]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.18,0.2,0.11],"radiusTop":[0.3,0.35,0.6,1.09,0.21],"radiusBottom":[0.3,0.36,0.98,1.09,0.87],"noiseScale":[0.46,1.79,1.14,1.23,1.29],"noiseImpactX":[0.46,0.48,0.5,0.5,0.45],"noiseImpactY":[0.34,0.35,0.73,1.64,2.63],"noiseImpactZ":[0,0,0,0.96,0.94],"height":[0.16,0.09,0.04,0.04,0.02],"radialSegments":[100,100,100,78.8,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
   recorded_at: Fri, 31 May 2024 04:18:24 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-b4648dce0143.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 02 Jun 2024 21:02:23 GMT
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717362144&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=a7FtQ6Ijl21DxFZhw4zlp67NDcGnGj%2FR%2BwEZ5M0TD2A%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"2df9967e04234cb630eb8088e0376331"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 625914d5-73da-4b5e-9b08-2a2ac18efe0b
+      X-Runtime:
+      - '0.006005'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Length:
+      - '1286'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","lifespan":86400000,"planted":1717362144,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[236,116,83],[236,116,83],[236,116,83],[236,116,83],[236,116,83]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.2,0.2,0.13],"radiusTop":[0.3,0.42,0.82,1.09,0.34],"radiusBottom":[0.3,0.34,0.85,1.09,0.53],"noiseScale":[0.46,1.14,1.37,1.13,0.69],"noiseImpactX":[0.46,0.48,0.5,0.5,0.49],"noiseImpactY":[0.34,0.49,0.87,1.92,2.63],"noiseImpactZ":[0,0,1,0.97,0.94],"height":[0.16,0.13,0.04,0.04,0.01],"radialSegments":[100,100,100,61.89,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Sun, 02 Jun 2024 21:02:24 GMT
+- request:
+    method: post
+    uri: https://be-plant-microservce-2db5d13ea731.herokuapp.com/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1717436723&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=vVekyTij%2BHe6l97FRFYrcUJZXSgUIbg1H2D2hQPMmtQ%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1717436723&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=vVekyTij%2BHe6l97FRFYrcUJZXSgUIbg1H2D2hQPMmtQ%3D
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1292'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.8.1 (Ruby/3.2.2/2023-03-30)
+      Date:
+      - Mon, 03 Jun 2024 17:45:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","lifespan":86400000,"planted":1717436723,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[205,102,215],[205,102,215],[205,102,215],[205,102,215],[205,102,215]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.18,0.2,0.16],"radiusTop":[0.3,0.38,0.71,1.09,0.71],"radiusBottom":[0.3,0.37,0.76,1.09,0.41],"noiseScale":[0.46,1.36,1.17,1.05,0.64],"noiseImpactX":[0.46,0.49,0.5,0.5,0.49],"noiseImpactY":[0.34,0.38,0.63,1.46,2.63],"noiseImpactZ":[0,0,1,0.99,0.94],"height":[0.16,0.08,0.04,0.04,0.03],"radialSegments":[100,100,100,48.89,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Mon, 03 Jun 2024 17:45:23 GMT
 recorded_with: VCR 6.2.0
