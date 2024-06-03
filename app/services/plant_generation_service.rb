@@ -1,6 +1,6 @@
 class PlantGenerationService
   def self.generate_plant(name, description, plant_type)
-    response = Faraday.post('http://localhost:3001/generate_plant') do |req|
+    response = Faraday.post('https://be-plant-microservce-b4648dce0143.herokuapp.com/') do |req|
       req.headers['Content-Type'] = 'application/json'
       req.body = {
         name: name,
