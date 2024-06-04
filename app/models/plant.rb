@@ -10,6 +10,7 @@ class Plant < ApplicationRecord
   validates :lifespan, presence: true, numericality: true
   validates :planted, presence: true, numericality: true
   validates :phases, presence: true
+  validates :position, presence: true
 
   validate :validate_phases_format
 

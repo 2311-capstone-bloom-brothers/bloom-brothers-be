@@ -6,19 +6,21 @@ RSpec.describe "Create A Plant", type: :request do
       @body = {
         name: "Rose",
         description: "The Flower Of Love",
-        plant_type: "flower1"
+        plant_type: "flower1",
+        position: "A1"
       }
       @bad_body = {
         name: "",
         description: "The Flower Of Love",
-        plant_type: "flower1"
+        plant_type: "flower1",
+        position: "A1"
       }
       @headers = {"CONTENT_TYPE" => "application/json"}
     end
 
     it "creates a new plant via HTTP request", vcr: { cassette_name: 'create_a_plant' } do
       post "/api/v0/plants", headers: @headers, params: JSON.generate(@body)
-
+      
       expect(response).to be_successful
       expect(response.status).to eq(201)
 
@@ -40,6 +42,8 @@ RSpec.describe "Create A Plant", type: :request do
       expect(attributes[:planted]).to be_a(Integer)
       expect(attributes).to have_key(:lifespan)
       expect(attributes[:lifespan]).to eq(86400000)
+      expect(attributes).to have_key(:position)
+      expect(attributes[:position]).to eq("A1")
       expect(attributes).to have_key(:phases)
       expect(attributes[:phases]).to be_a(Hash)
     end

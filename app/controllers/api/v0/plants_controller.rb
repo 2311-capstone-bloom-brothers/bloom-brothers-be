@@ -8,8 +8,9 @@ class Api::V0::PlantsController < ApplicationController
     plant_name = params[:name]
     description = params[:description]
     type = params[:plant_type]
-
-    generated_plant = PlantGenerationService.generate_plant(plant_name, description, type)
+    position = params[:position]
+    
+    generated_plant = PlantGenerationService.generate_plant(plant_name, description, type, position)
     create_plant = Plant.create!(generated_plant)
 
     render json: PlantSerializer.new(create_plant), status: 201
@@ -23,6 +24,6 @@ class Api::V0::PlantsController < ApplicationController
   private
 
   def plant_params
-    params.require(:plant).permit(:name, :description, :lifespan, :planted, :phases, :plant_type)
+    params.require(:plant).permit(:name, :description, :lifespan, :planted, :phases, :plant_type, :position)
   end
 end

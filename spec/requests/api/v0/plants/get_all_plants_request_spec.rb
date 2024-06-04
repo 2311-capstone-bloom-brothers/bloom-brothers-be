@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "Get all Plants", type: :request do
   describe "As a user" do
     it "returns all plant data via HTTP request", vcr: { cassette_name: 'get_all_plants' } do
-      plant_data_1 = PlantGenerationService.generate_plant("rose", "The Flower of love", "flower1")
-      plant_data_2 = PlantGenerationService.generate_plant("Sun Flower", "Holds the power of the sun", "flower1")
+      plant_data_1 = PlantGenerationService.generate_plant("rose", "The Flower of love", "flower1", "A1")
+      plant_data_2 = PlantGenerationService.generate_plant("Sun Flower", "Holds the power of the sun", "flower1", "A2")
       @plant = Plant.create!(plant_data_1)
       @plant_2 = Plant.create!(plant_data_2)
 
@@ -28,6 +28,7 @@ RSpec.describe "Get all Plants", type: :request do
         check_hash_structure(plant[:attributes], :description, String)
         check_hash_structure(plant[:attributes], :lifespan, Integer)
         check_hash_structure(plant[:attributes], :planted, Integer)
+        check_hash_structure(plant[:attributes], :position, String)
         check_hash_structure(plant[:attributes], :phases, Hash)
       end
     end

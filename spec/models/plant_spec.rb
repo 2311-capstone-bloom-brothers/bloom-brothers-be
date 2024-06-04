@@ -10,6 +10,7 @@ RSpec.describe Plant, type: :model do
     it { should validate_presence_of :planted}
     it { should validate_numericality_of :planted}
     it { should validate_presence_of :phases}
+    it { should validate_presence_of :position}
   end
 
   describe "relationships" do
