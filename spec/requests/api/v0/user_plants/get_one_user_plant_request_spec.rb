@@ -8,12 +8,14 @@ RSpec.describe "Get one user plant", type: :request, vcr: true do
       plant_1_name = "Rose"
       plant_1_description = "The Flower of love"
       plant_1_type = "flower1"
+      position = "A1"
       plant_2_name = "Sun Flower"
       plant_2_description = "The power of the sun"
       plant_2_type = "flower1"
+      position_2 = "A2"
 
-      plant_data_1 = PlantGenerationService.generate_plant(plant_1_name, plant_1_description, plant_1_type)
-      plant_data_2 = PlantGenerationService.generate_plant(plant_2_name, plant_2_description, plant_2_type)
+      plant_data_1 = PlantGenerationService.generate_plant(plant_1_name, plant_1_description, plant_1_type, position)
+      plant_data_2 = PlantGenerationService.generate_plant(plant_2_name, plant_2_description, plant_2_type, position_2)
       @plant_1 = Plant.create!(plant_data_1)
       @plant_2 = Plant.create!(plant_data_2)
       @user_plant_1 = UserPlant.create!({user_id: @user.id, plant_id: @plant_1.id})
@@ -47,6 +49,8 @@ RSpec.describe "Get one user plant", type: :request, vcr: true do
       expect(attributes[:planted]).to be_a(Integer)
       expect(attributes).to have_key(:lifespan)
       expect(attributes[:lifespan]).to eq(86400000)
+      expect(attributes).to have_key(:position)
+      expect(attributes[:position]).to eq("A1")
       expect(attributes).to have_key(:phases)
       expect(attributes[:phases]).to be_a(Hash)
     end

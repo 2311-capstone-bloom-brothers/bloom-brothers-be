@@ -7,8 +7,8 @@ RSpec.describe "Get All User Plants", type: :request do
     end
 
     it "gets all plants for a user via HTTP Request", vcr: { cassette_name: 'get_all_user_plants' } do
-      plant_data_1 = PlantGenerationService.generate_plant("rose", "The Flower of love", "flower1")
-      plant_data_2 = PlantGenerationService.generate_plant("Sun Flower", "Holds the power of the sun", "flower1")
+      plant_data_1 = PlantGenerationService.generate_plant("rose", "The Flower of love", "flower1", "A1")
+      plant_data_2 = PlantGenerationService.generate_plant("Sun Flower", "Holds the power of the sun", "flower1", "A2")
       @plant_1 = Plant.create!(plant_data_1)
       @plant_2 = Plant.create!(plant_data_2)
       @user_plant_1 = UserPlant.create!({user_id: @user.id, plant_id: @plant_1.id})
@@ -37,6 +37,7 @@ RSpec.describe "Get All User Plants", type: :request do
         check_hash_structure(plant[:attributes], :description, String)
         check_hash_structure(plant[:attributes], :lifespan, Integer)
         check_hash_structure(plant[:attributes], :planted, Integer)
+        check_hash_structure(plant[:attributes], :position, String)
         check_hash_structure(plant[:attributes], :phases, Hash)
       end
     end
