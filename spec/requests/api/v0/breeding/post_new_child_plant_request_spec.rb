@@ -10,6 +10,7 @@ RSpec.describe "Breed a Plant from 2 plants", type: :request do
         lifespan: 1,
         planted: 1717184430,
         plant_type: "combo_of_flower_1&2",
+        position: "A1",
         phases: {
           stem: {
             color: [0, 100, 0],
@@ -69,6 +70,8 @@ RSpec.describe "Breed a Plant from 2 plants", type: :request do
       expect(attributes[:planted]).to eq(1717184430)
       expect(attributes).to have_key(:lifespan)
       expect(attributes[:lifespan]).to eq(1)
+      expect(attributes).to have_key(:position)
+      expect(attributes[:position]).to eq("A1")
       expect(attributes).to have_key(:phases)
       expect(attributes[:phases]).to be_a(Hash)
     end
