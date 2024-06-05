@@ -18,7 +18,7 @@ RSpec.describe "Get all Plants", type: :request do
       expect(plants).to have_key(:data)
       expect(plants[:data]).to be_a(Array)
       expect(plants[:data].count).to eq(2)
-
+      
       plants[:data].each do |plant|
         check_hash_structure(plant, :id, String)
         check_hash_structure(plant, :type, String)

@@ -25,7 +25,7 @@ RSpec.describe "Create A Plant", type: :request do
       expect(response.status).to eq(201)
 
       plant = JSON.parse(response.body, symbolize_names: true)
-
+      
       check_hash_structure(plant, :data, Hash)
       check_hash_structure(plant[:data], :id, String)
       check_hash_structure(plant[:data], :type, String)
