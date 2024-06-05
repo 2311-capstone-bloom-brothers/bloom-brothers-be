@@ -478,7 +478,8 @@
   <details>
     <summary>DELETE a plant</summary>
     ENDPOINT <code>DELETE "/plants/:id"</code></br>
-    This endpoint 
+    This endpoint deletes a plant</br>
+    
   </details>
 
 ### Plant Generator Micro-Service 
