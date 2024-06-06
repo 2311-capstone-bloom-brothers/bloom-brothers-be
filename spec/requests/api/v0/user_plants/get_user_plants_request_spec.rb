@@ -27,7 +27,7 @@ RSpec.describe "Get All User Plants", type: :request do
       expect(result).to have_key(:data)
       expect(result[:data]).to be_a(Array)
       expect(result[:data].count).to eq(2)
-
+      
       result[:data].each do |plant|
         check_hash_structure(plant, :id, String)
         check_hash_structure(plant, :type, String)
