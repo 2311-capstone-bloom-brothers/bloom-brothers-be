@@ -15,8 +15,20 @@ user = User.create(email: "user1@example.com", password_digest: "password1", loc
 
 
 # Create some plants
-plant_1 = PlantGenerator.create(name: "Rose", description: "The flower of love", plant_type: "flower1")
-plant_2 = PlantGenerator.create(name: "Sun Flower", description: "Bows down to no man or Star", plant_type: "flower1")
+plant_1_name = "Rose"
+plant_1_description = "The Flower of Love"
+plant_1_type = "flower1"
+plant_1_position = "A1"
+
+plant_1 = PlantGenerationService.generate_plant(plant_1_name, plant_1_description, plant_1_type, plant_1_position)
+
+plant_2_name = "Sun Flower"
+plant_2_description = "Bows down to no man or star"
+plant_2_type = "flower2"
+plant_2_position = "A4"
+
+plant_2 = PlantGenerationService.generate_plant(plant_2_name, plant_2_description, plant_2_type, plant_2_position)
+
 plant_1 = Plant.create!(plant_1)
 plant_2 = Plant.create!(plant_2)
 
