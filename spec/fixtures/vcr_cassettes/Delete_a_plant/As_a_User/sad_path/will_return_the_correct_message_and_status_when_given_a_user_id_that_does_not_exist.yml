@@ -2,106 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/generate_plant
-    body:
-      encoding: UTF-8
-      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1","position":"A1"}'
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept, Origin
-      Etag:
-      - W/"ae8559d8619f28b00a4c79f4ccf2581c"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 025a991c-1af0-4209-9c7d-636ffb7e3c44
-      X-Runtime:
-      - '0.003884'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, process_action.action_controller;dur=0.28
-      Content-Length:
-      - '1286'
-    body:
-      encoding: UTF-8
-      string: '{"name":"Rose","description":"The Flower of love","plant_type":"flower1","lifespan":86400000,"planted":1717361751,"position":"A1","phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[207,97,133],[207,97,133],[207,97,133],[207,97,133],[207,97,133]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.17,0.2,0.11],"radiusTop":[0.3,0.41,0.82,1.09,0.98],"radiusBottom":[0.3,0.42,0.81,1.09,0.2],"noiseScale":[0.46,1.09,1.77,1.03,1.28],"noiseImpactX":[0.46,0.49,0.5,0.5,0.45],"noiseImpactY":[0.34,0.37,0.54,2.07,2.63],"noiseImpactZ":[0,0,0,0.95,0.94],"height":[0.16,0.11,0.04,0.04,0.01],"radialSegments":[100,100,100,36.01,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
-  recorded_at: Sun, 02 Jun 2024 20:55:51 GMT
-- request:
-    method: post
-    uri: http://localhost:3001/generate_plant
-    body:
-      encoding: UTF-8
-      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","position":"A2"}'
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept, Origin
-      Etag:
-      - W/"f8aa380f20d537533d05830de0c3334a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 271f8743-c493-40b1-b702-d0e706b10732
-      X-Runtime:
-      - '0.009802'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.01, process_action.action_controller;dur=0.82
-      Content-Length:
-      - '1286'
-    body:
-      encoding: UTF-8
-      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","lifespan":86400000,"planted":1717361751,"position":"A2","phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[65,66,143],[65,66,143],[65,66,143],[65,66,143],[65,66,143]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.2,0.2,0.11],"radiusTop":[0.3,0.42,0.95,1.09,0.74],"radiusBottom":[0.3,0.46,0.9,1.09,0.55],"noiseScale":[0.46,1.72,1.5,1.1,1.25],"noiseImpactX":[0.46,0.46,0.5,0.5,0.45],"noiseImpactY":[0.34,0.35,0.82,2.21,2.63],"noiseImpactZ":[0,0,1,0.94,0.94],"height":[0.16,0.08,0.04,0.04,0.03],"radialSegments":[100,100,100,32.16,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
-  recorded_at: Sun, 02 Jun 2024 20:55:51 GMT
-- request:
-    method: post
     uri: https://be-plant-microservce-b4648dce0143.herokuapp.com/generate_plant
     body:
       encoding: UTF-8
@@ -316,4 +216,64 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":"flower1","lifespan":86400000,"planted":1717436724,"position":"A2","phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[184,1,135],[184,1,135],[184,1,135],[184,1,135],[184,1,135]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.17,0.2,0.13],"radiusTop":[0.3,0.51,0.59,1.09,0.59],"radiusBottom":[0.3,0.47,0.84,1.09,0.92],"noiseScale":[0.46,0.71,1.4,1.03,1.2],"noiseImpactX":[0.46,0.49,0.5,0.5,0.46],"noiseImpactY":[0.34,0.35,0.88,1.12,2.63],"noiseImpactZ":[0,0,0,0.97,0.94],"height":[0.16,0.13,0.04,0.04,0.02],"radialSegments":[100,100,100,37.73,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
   recorded_at: Mon, 03 Jun 2024 17:45:24 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower of love","plant_type":["flower1","A1"],"position":"A1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '69'
+    body:
+      encoding: UTF-8
+      string: '{"error":"undefined method `to_sym'' for [\"flower1\", \"A1\"]:Array"}'
+  recorded_at: Mon, 24 Jun 2024 18:27:10 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Sun Flower","description":"The power of the sun","plant_type":["flower1","A2"],"position":"A2"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '69'
+    body:
+      encoding: UTF-8
+      string: '{"error":"undefined method `to_sym'' for [\"flower1\", \"A2\"]:Array"}'
+  recorded_at: Mon, 24 Jun 2024 18:27:10 GMT
 recorded_with: VCR 6.2.0
