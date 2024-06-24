@@ -2,56 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/generate_plant
-    body:
-      encoding: UTF-8
-      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","position":"A1"}'
-    headers:
-      User-Agent:
-      - Faraday v2.9.0
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - '0'
-      X-Content-Type-Options:
-      - nosniff
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Content-Type:
-      - application/json; charset=utf-8
-      Vary:
-      - Accept, Origin
-      Etag:
-      - W/"1b7c3a608b92e93931d6f432e5cf92e2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 64df54eb-146f-40eb-bc48-f6bf8dd874a6
-      X-Runtime:
-      - '0.021348'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.00, process_action.action_controller;dur=0.62
-      Content-Length:
-      - '1275'
-    body:
-      encoding: UTF-8
-      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","lifespan":86400000,"planted":1717129104,"position":"A1","phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[5,156,66],[5,156,66],[5,156,66],[5,156,66],[5,156,66]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.16,0.18,0.2,0.11],"radiusTop":[0.3,0.35,0.6,1.09,0.21],"radiusBottom":[0.3,0.36,0.98,1.09,0.87],"noiseScale":[0.46,1.79,1.14,1.23,1.29],"noiseImpactX":[0.46,0.48,0.5,0.5,0.45],"noiseImpactY":[0.34,0.35,0.73,1.64,2.63],"noiseImpactZ":[0,0,0,0.96,0.94],"height":[0.16,0.09,0.04,0.04,0.02],"radialSegments":[100,100,100,78.8,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
-  recorded_at: Fri, 31 May 2024 04:18:24 GMT
-- request:
-    method: post
     uri: https://be-plant-microservce-b4648dce0143.herokuapp.com/generate_plant
     body:
       encoding: UTF-8
@@ -158,4 +108,34 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","lifespan":86400000,"planted":1717436723,"position":"A1","phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[205,102,215],[205,102,215],[205,102,215],[205,102,215],[205,102,215]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.18,0.2,0.16],"radiusTop":[0.3,0.38,0.71,1.09,0.71],"radiusBottom":[0.3,0.37,0.76,1.09,0.41],"noiseScale":[0.46,1.36,1.17,1.05,0.64],"noiseImpactX":[0.46,0.49,0.5,0.5,0.49],"noiseImpactY":[0.34,0.38,0.63,1.46,2.63],"noiseImpactZ":[0,0,1,0.99,0.94],"height":[0.16,0.08,0.04,0.04,0.03],"radialSegments":[100,100,100,48.89,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
   recorded_at: Mon, 03 Jun 2024 17:45:23 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/generate_plant
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","position":"A1"}'
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '1302'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rose","description":"The Flower Of Love","plant_type":"flower1","position":"A1","lifespan":86400000,"planted":1719253629,"phases":{"stem":{"color":[[0,255,0],[0,255,0],[0,255,0],[0,255,0],[0,255,0]],"stemWidth":[0.4,0.4,0.4,0.4,0.4],"path":[[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0],[0.1,0.7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0],[0.1,1.76,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.8],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0],[0.1,7,0]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,4.5,0.88],[0.1,7.46,1.42],[0.1,8.34,1.08],[0.1,8.42,0],[0.1,7.08,-0.26]],[[0.5,0,0],[0.5,0,0],[0.5,0,0.56],[0.1,2.5,0.88],[0.1,5.46,1.42],[0.1,6.34,1.08],[0.1,6.42,0],[0.1,5.08,-0.26]]]},"bloom":{"color":[[177,26,132],[177,26,132],[177,26,132],[177,26,132],[177,26,132]],"petalCount":[1,1,1,1,1],"recRadius":[0.16,0.17,0.17,0.2,0.18],"radiusTop":[0.3,0.44,1.01,1.09,1.02],"radiusBottom":[0.3,0.52,0.78,1.09,0.93],"noiseScale":[0.46,1.44,1.22,1.14,0.91],"noiseImpactX":[0.46,0.49,0.5,0.5,0.45],"noiseImpactY":[0.34,0.34,0.61,1.08,2.63],"noiseImpactZ":[0,0,1,0.96,0.94],"height":[0.16,0.07,0.04,0.04,0.03],"radialSegments":[100,100,100,90.0,11.88],"rotation":[[0,0,0],[0.03,0,0],[-0.38,0.07,-0.43],[-0.38,0.07,0.07],[-0.71,0.07,-0.43]]}}}'
+  recorded_at: Mon, 24 Jun 2024 18:27:09 GMT
 recorded_with: VCR 6.2.0
